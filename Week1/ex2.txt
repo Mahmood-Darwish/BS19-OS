@@ -1,0 +1,21 @@
+    1  ls
+    2  cd Desktop/
+    3  cls
+    4  mkdir week1
+    5  cd week1/
+    6  cd..
+    7  cd 
+    8  cd ..
+    9  cd Des
+   10  cd
+   11  ls
+   12  mkdir OS
+   13  cd os
+   14  cd OS
+   15  mkdir week1
+   16  cd week1/
+   17  help ls
+   18  man ls
+   19  ls -l -r /usr/bin/"gcc" >./ex1.txt
+   20  touch ex1.sh
+   21  history >ex2.txt
