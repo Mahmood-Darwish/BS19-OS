@@ -1,0 +1,2 @@
+The results are that the n stays the same beacuse after calling the fork() function the code doesn't modify n. Therefore, all the programs get the same valeu for n.
+pid increases each time we call the function because pid is the id of this process so when we call more processes the id increases.
