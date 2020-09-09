@@ -1,1 +1,2 @@
-We get 11 processes beacuse each time we call fork() the iteration of the loop is the same between the parent and the child.
+We get 8 processes beacuse each time we call fork() the iteration of the loop is the same between the parent and the child.
+We can see the process in the pstree command.
