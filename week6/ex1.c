@@ -29,7 +29,6 @@ int comp (const void * elem1, const void * elem2)
 
 int main()
 {
-    start = clock();
     printf("Enter the number of processes:\n");
     scanf("%d", &n);
     printf("Enter processes line by line in the format \" arrival_time burst_time \" (counting starts from 0):\n");
@@ -43,6 +42,7 @@ int main()
         printf("The %d-th process:\n", i);
         printf("%d %d\n", arv_time[i].x, arv_time[i].y);
     }
+    start = clock();
     for( i = 0 ; i < n ; i++){
         waiting_time[i] = max(0, time- arv_time[i].x);
         time = max(time, arv_time[i].x);
@@ -51,13 +51,13 @@ int main()
         temp1 += waiting_time[i];
         temp2 += TAT[i];
     }
+    end = clock();
     for(i = 0 ; i < n ; i++){
         printf("Waiting time for the %d-th process: %d\n", i, waiting_time[i]);
         printf("TAT for the %d-th process: %d\n", i, TAT[i]);
     }
     printf("Average waiting time: %lf\n", (temp1+0.0)/(n+0.0));
     printf("Average TAT: %lf\n", (temp2+0.0)/(n+0.0));
-    end = clock();
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
     printf("Compilation time: %lf\n", cpu_time_used);
     return 0;
