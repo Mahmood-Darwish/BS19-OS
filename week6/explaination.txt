@@ -1,0 +1,1 @@
+Using a small dataset it is clear that the FCFS algo is the fastest by a small margin which probably comes from the lack of switching which causes an increase in running time.
