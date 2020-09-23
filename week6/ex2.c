@@ -111,7 +111,6 @@ int main()
     start = clock();
     qsort (arv_time, n, sizeof(*arv_time), comp);
     for( i = 0 ; i < n ; i++){
-        printf("%d\n", k);
         if(current == 0 && k < n){
             Insert(arv_time[k]);
             k++;
