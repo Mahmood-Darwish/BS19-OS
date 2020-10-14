@@ -1,0 +1,4 @@
+Using a sequence of the same number repeated N times, we get a hit/miss ratio that is almost 100%.
+The only time where we get a miss is at first when there is nothing loaded in the pages. After that we will only get hits because we are only getting the same request and we keeping using it.
+Therefore, the ratio will be (n - 1)/n.
+Using a sequance of distinct numbers will result in a zero hit/miss ratio because eevrytime we will encounter a new number that we have to add and never use again.
