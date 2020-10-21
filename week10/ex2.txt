@@ -1,0 +1,7 @@
+mahmood@mahmood-VirtualBox:~/OS/week10$ ln ../week1/file.txt _ex2.txt
+mahmood@mahmood-VirtualBox:~/OS/week10$ find ./ -inum 399438
+./_ex2.txt
+mahmood@mahmood-VirtualBox:~/OS/week10$ find -inum 399438 -exec rm {} \;
+mahmood@mahmood-VirtualBox:~/OS/week10$ ls -i _ex2.txt
+ls: cannot access '_ex2.txt': No such file or directory
+
