@@ -54,6 +54,7 @@ int main()
                 for(j = 0; j < m ; j++)
                     work[j] += allocation[i][j];
                 finish[i] = 1;
+                i = -1;
             }
         }
     }
