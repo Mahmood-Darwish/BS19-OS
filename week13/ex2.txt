@@ -1,14 +1,14 @@
-1) Recovery: due to time and space complexity it is not very efficient or desired, it also can let data be lost or a deadlock happen, usually not practical.
-    It can be used in systems where it is possible to retry the transaction.
+In Recovery: Due to time and space complexity it is not very efficient or desired, it also can let data be lost or a deadlock happen, usually not practical.
+It ususally solves the problem by killing processes or taking away their resoruces which is very crude and should be avoided.
+It can be used in systems where it is possible to retry the transaction.
 
 
-2) Prevention:
-    Doesn't enter the state of deadlock, doesn't need to know in advance the resourses requests,
-    doesn't need to spend resourses on detecting, each proccess is required to specify the resources they need prior to the critical
-    section. Commonly used in distributed real-time systems and embedded systems, because communication costs in deadlock avoidance is
-    very costly due to the need to maintain the global states. Sometimes preempts more than necessary deadlocks.
+In Prevention: Doesn't enter the state of deadlock, doesn't need to know in advance the resourses requests,
+doesn't need to spend resourses on detecting, it usually works by making sure that at least one of the 4 conditions for deadlock will never be met.
+Commonly used in distributed real-time systems and embedded systems, because communication costs in deadlock avoidance is
+very costly due to the need to maintain the global states. Sometimes preempts more than necessary deadlocks.
 
 
-3) Avoidance:
-    Doesn't enter the state of deadlock, less restrictive, no constraints on the resources, though being
-    inefficient because of complexity in terms of computations, low resource utilizations.
+In Avoidance: Doesn't enter the state of deadlock, less restrictive, no constraints on the resources, though needs to know certain 
+information about the resources. This makes it in need of a smart scheduling algorithm. Which could be costly in terms of complexity which makes non 
+viable for systems with low computting power.
